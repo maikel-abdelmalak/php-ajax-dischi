@@ -93,7 +93,19 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+$(document).ready(function () {
+  console.log('acia');
+  $.ajax({
+    'url': '../versione-ajax/dischi.php',
+    'method': 'GET',
+    'success': function success(data) {
+      console.log(data);
+    },
+    'error': function error() {
+      alert('errore');
+    }
+  });
+});
 
 /***/ }),
 
